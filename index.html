@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopify - Your E-Commerce Store</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <div class="logo">
+            <h1>Shopify</h1>
+          </div>
+          <nav class="nav">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#products" class="nav-link">Products</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </nav>
+          <div class="header-actions">
+            <button class="icon-btn" id="cart-btn">
+              <span class="cart-icon">🛒</span>
+              <span class="cart-count">0</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+      <div class="cart-header">
+        <h2>Shopping Cart</h2>
+        <button class="close-cart" id="close-cart">&times;</button>
+      </div>
+      <div class="cart-body">
+        <div class="empty-cart" id="empty-cart">
+          <p>Your cart is empty</p>
+        </div>
+        <div class="cart-items" id="cart-items">
+        </div>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total:</span>
+          <span class="total-price" id="total-price">$0.00</span>
+        </div>
+        <button class="btn btn-primary checkout-btn">Checkout</button>
+      </div>
+    </div>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container">
+          <div class="hero-content">
+            <h2 class="hero-title">Welcome to Shopify</h2>
+            <p class="hero-subtitle">Discover amazing products at great prices</p>
+            <button class="btn btn-primary">Shop Now</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="products" id="products">
+        <div class="container">
+          <h2 class="section-title">Featured Products</h2>
+          <div class="product-grid">
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Wireless Headphones">
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Wireless Headphones</h3>
+                <p class="product-description">Premium sound quality with noise cancellation</p>
+                <div class="product-footer">
+                  <span class="product-price">$99.99</span>
+                  <button class="btn btn-secondary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Smart Watch">
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Smart Watch</h3>
+                <p class="product-description">Track your fitness and stay connected</p>
+                <div class="product-footer">
+                  <span class="product-price">$199.99</span>
+                  <button class="btn btn-secondary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Laptop">
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Modern Laptop</h3>
+                <p class="product-description">Powerful performance for work and play</p>
+                <div class="product-footer">
+                  <span class="product-price">$899.99</span>
+                  <button class="btn btn-secondary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://images.pexels.com/photos/1619801/pexels-photo-1619801.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Camera">
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Digital Camera</h3>
+                <p class="product-description">Capture life's moments in stunning detail</p>
+                <div class="product-footer">
+                  <span class="product-price">$549.99</span>
+                  <button class="btn btn-secondary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://images.pexels.com/photos/341523/pexels-photo-341523.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Smartphone">
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Smartphone</h3>
+                <p class="product-description">Latest technology in the palm of your hand</p>
+                <div class="product-footer">
+                  <span class="product-price">$699.99</span>
+                  <button class="btn btn-secondary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img src="https://images.pexels.com/photos/2783873/pexels-photo-2783873.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Tablet">
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Tablet</h3>
+                <p class="product-description">Perfect for work, entertainment, and creativity</p>
+                <div class="product-footer">
+                  <span class="product-price">$449.99</span>
+                  <button class="btn btn-secondary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="container">
+          <h2 class="section-title">About Us</h2>
+          <p class="about-text">
+            Welcome to Shopify, your trusted online destination for quality products.
+            We're dedicated to bringing you the best selection of electronics, gadgets,
+            and lifestyle products at competitive prices. Our mission is to provide an
+            exceptional shopping experience with fast shipping and outstanding customer service.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="container">
+          <h2 class="section-title">Contact Us</h2>
+          <div class="contact-content">
+            <div class="contact-info">
+              <div class="contact-item">
+                <h3>Email</h3>
+                <p>support@shopify.com</p>
+              </div>
+              <div class="contact-item">
+                <h3>Phone</h3>
+                <p>+1 (555) 123-4567</p>
+              </div>
+              <div class="contact-item">
+                <h3>Address</h3>
+                <p>123 Commerce Street, Shop City, SC 12345</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Shopify</h3>
+            <p>Your trusted e-commerce partner</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Customer Service</h4>
+            <ul class="footer-links">
+              <li><a href="#">Shipping Info</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Shopify. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/cart.js"></script>
+  </body>
+</html>
